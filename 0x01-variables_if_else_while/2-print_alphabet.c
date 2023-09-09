@@ -1,19 +1,20 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ *main - print lowercase a-z
+ *Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char letters;
+	char letter = 'a';
 
-	for (letters = 'a'; letters <= 'z'; letters++)
-		putchar(letters"/n");
+	while (letter <= 'z')
+	{
+		putchar(letter);
+		letter++;
+	}
+	putchar('\n');
 
 	return (0);
 }
