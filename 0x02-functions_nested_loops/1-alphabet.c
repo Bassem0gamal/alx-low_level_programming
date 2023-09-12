@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- *main : Entry point
+ *Print_alphabet
  *
+ *main: Entry point
  *
+ *return: 0
  */
 
 void print_alphabet(void)
