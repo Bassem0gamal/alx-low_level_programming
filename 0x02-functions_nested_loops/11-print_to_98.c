@@ -7,15 +7,9 @@
 
 void print_to_98(int i)
 {
-	int j;
-
-	j = i;
-
-	for (j < 99)
+	for (int j = i; j <= 98; j++)
 	{
-		_putchar("%d", j);
-		_putchar(", ");
-		j++
+		_putchar("%d, ", j);
 	{
 	return (0);
 }
