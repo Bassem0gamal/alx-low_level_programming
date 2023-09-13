@@ -11,5 +11,4 @@ void print_to_98(int i)
 	{
 		_putchar("%d, ", j);
 	{
-	return (0);
 }
