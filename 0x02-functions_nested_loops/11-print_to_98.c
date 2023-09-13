@@ -18,7 +18,8 @@ void print_to_98(int n)
 			if (i != 98)
 				printf("%d, ", i);
 			else if (i == 98)
-				printf("%d\n", i);
+				printf("%d\n",
+		{
 	}
 	else if (n >= 98)
 	{
