@@ -7,8 +7,12 @@
 
 void print_to_98(int i)
 {
-	for (int j = i; j <= 98; j++)
+	int j;
+
+	j = i;
+	for (j <= 98)
 	{
 		_putchar("%d, ", j);
+		j++;
 	{
 }
