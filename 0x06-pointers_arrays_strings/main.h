@@ -1,5 +1,5 @@
 #ifndef FILE_MAIN
-11;rgb:0000/0000/0000#define FIEL_MAIN
+#define FIEL_MAIN
 
 int _putchar(char c);
 char *_strcat(char *dest, char *src);
