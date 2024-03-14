@@ -3,29 +3,40 @@
 /**
   * main - Prints the first 98 fibonacci numbers
   *
-  * Return: Nothing!
+  * Return: 0 (Success)
   */
 int main(void)
 {
-	int i = 0;
-	int j = 1, k = 2;
+	unsigned long int i, j, k, o, l, m1, m2;
 
-	while (i < 98)
+	j = 1;
+	k = 2;
+
+	printf("%lu", j);
+
+	for (i = 1; i < 91; i++)
 	{
-		if (i == 0)
-			printf("%d", j);
-		else if (i == 1)
-			printf(", %d", k);
-		else
-		{
-			k += j;
-			j = k - j;
-			printf(", %d", k);
-		}
+		printf(", %lu", k);
+		k = k + j;
+		j = k - j;
+	}
 
-		++i;
+	o = j / 1000000000;
+	l = j % 1000000000;
+	m1 = k / 1000000000;
+	m2 = k % 1000000000;
+
+	for (i = 92; i < 99; ++i)
+	{
+		printf(", %lu", m1 + (m2 / 1000000000));
+		printf("%lu", m2 % 1000000000);
+		m1 = m1 + o;
+		o = m1 - o;
+		m2 = m2 + l;
+		l = m2 - l;
 	}
 
 	printf("\n");
+
 	return (0);
 }
