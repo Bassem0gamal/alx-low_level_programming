@@ -24,19 +24,19 @@ void close_elf(int elf);
 
 void print_magic(unsigned char *e_ident)
 {
-  int index;
+	int index;
 
-  printf("  Magic:   ");
+	printf("  Magic:   ");
 
-  for (index = 0; index < EI_NIDENT; index++)
-    {
-      printf("%02x", e_ident[index]);
+	for (index = 0; index < EI_NIDENT; index++)
+	{
+		printf("%02x", e_ident[index]);
 
-      if (index == EI_NIDENT - 1)
-	printf("\n");
-      else
-	printf(" ");
-    }
+		if (index == EI_NIDENT - 1)
+			printf("\n");
+		else
+			printf(" ");
+	}
 }
 
 /**
@@ -46,22 +46,22 @@ void print_magic(unsigned char *e_ident)
 
 void print_class(unsigned char *e_ident)
 {
-  printf("  Class:                             ");
+	printf("  Class:                             ");
 
-  switch (e_ident[EI_CLASS])
-    {
-    case ELFCLASSNONE:
-      printf("none\n");
-      break;
-    case ELFCLASS32:
-      printf("ELF32\n");
-      break;
-    case ELFCLASS64:
-      printf("ELF64\n");
-      break;
-    default:
-      printf("<unknown: %x>\n", e_ident[EI_CLASS]);
-    }
+	switch (e_ident[EI_CLASS])
+	{
+	case ELFCLASSNONE:
+		printf("none\n");
+		break;
+	case ELFCLASS32:
+		printf("ELF32\n");
+		break;
+	case ELFCLASS64:
+		printf("ELF64\n");
+		break;
+	default:
+		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
+	}
 }
 
 /**
